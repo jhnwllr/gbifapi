@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1549010880043.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "F8F440BB",
+    "lastKnownWriteTime" : 1549015810,
+    "last_content_update" : 1549015810624,
+    "path" : "C:/Users/ftw712/Desktop/gbifapi/R/getCountryTaxonKeyCounts.R",
+    "project_path" : "R/getCountryTaxonKeyCounts.R",
+    "properties" : {
+        "cursorPosition" : "11,3",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 18,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

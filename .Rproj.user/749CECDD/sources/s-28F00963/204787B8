@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1543416842374.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "204787B8",
+    "lastKnownWriteTime" : 1544781059,
+    "last_content_update" : 1544781059018,
+    "path" : "C:/Users/ftw712/Desktop/gbifapi/R/pager.R",
+    "project_path" : "R/pager.R",
+    "properties" : {
+        "cursorPosition" : "12,10",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

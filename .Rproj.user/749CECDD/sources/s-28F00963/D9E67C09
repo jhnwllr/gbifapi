@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1544782701282.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "D9E67C09",
+    "lastKnownWriteTime" : 1544782897,
+    "last_content_update" : 1544782897222,
+    "path" : "C:/Users/ftw712/Desktop/gbifapi/R/getDatasetKeys.R",
+    "project_path" : "R/getDatasetKeys.R",
+    "properties" : {
+        "cursorPosition" : "15,36",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 11,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

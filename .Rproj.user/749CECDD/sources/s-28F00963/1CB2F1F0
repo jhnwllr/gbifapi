@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1543496047417.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "1CB2F1F0",
+    "lastKnownWriteTime" : 1553087737,
+    "last_content_update" : 1553087737508,
+    "path" : "C:/Users/ftw712/Desktop/gbifapi/R/pageWhile.R",
+    "project_path" : "R/pageWhile.R",
+    "properties" : {
+        "cursorPosition" : "5,56",
+        "scrollLine" : "28",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

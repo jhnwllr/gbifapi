@@ -1,0 +1,4 @@
+exportPattern("^[[:alpha:]]+")
+importFrom(magrittr,"%>%")
+importFrom(roperators,"%+%")
+import(purrr)

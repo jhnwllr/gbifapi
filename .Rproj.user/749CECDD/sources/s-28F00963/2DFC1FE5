@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1544541977194.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "2DFC1FE5",
+    "lastKnownWriteTime" : 1553761142,
+    "last_content_update" : 1553761142976,
+    "path" : "C:/Users/ftw712/Desktop/gbifapi/R/addTaxonInfo.R",
+    "project_path" : "R/addTaxonInfo.R",
+    "properties" : {
+        "cursorPosition" : "15,12",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 10,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
