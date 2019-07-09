@@ -13,7 +13,7 @@
 #'
 
 
-addTaxonInfo = function(.data,key) { # adds taxon info to a data.frame with a species key NA if not found
+addTaxonInfo = function(.data,key,moreInfo=FALSE) { # adds taxon info to a data.frame with a species key NA if not found
   arguments = as.list(match.call())
   key = eval(arguments$key, .data)
 
@@ -29,7 +29,15 @@ addTaxonInfo = function(.data,key) { # adds taxon info to a data.frame with a sp
   rank = L %>% map(~ .x$rank) %>% map_if(is_empty, ~ NA_character_) %>% map_chr(~ .x)
   scientificName = L %>% map(~ .x$scientificName) %>% map_if(is_empty, ~ NA_character_) %>% map_chr(~ .x)
 
-  d = data.frame(kingdom,class,phylum,order,family,genus,species,rank,scientificName,stringsAsFactors=FALSE)
+  if(moreInfo) {
+  nubKey = L %>% map(~ .x$nubKey) %>% map_if(is_empty, ~ NA_character_) %>% map_chr(~ .x)
+  taxonomicStatus = L %>% map(~ .x$taxonomicStatus) %>% map_if(is_empty, ~ NA_character_) %>% map_chr(~ .x)
+  d = data.frame(kingdom,class,phylum,order,family,genus,species,rank,scientificName,nubKey,taxonomicStatus,stringsAsFactors=FALSE)
+
+  } else {
+    d = data.frame(kingdom,class,phylum,order,family,genus,species,rank,scientificName,stringsAsFactors=FALSE)
+  }
+
   d = cbind(.data,d)
   return(d)
 }

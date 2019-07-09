@@ -5,7 +5,9 @@
 # gbifapi(url) # should return big list
 
 
-gbifapi <- function(url) {
+gbifapi <- function(url,verbose=FALSE) {
+
+  if(verbose) print(url)
 
   Call = curl::curl_fetch_memory(url)$content %>% rawToChar() # make initial call
 

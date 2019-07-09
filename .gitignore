@@ -10,3 +10,4 @@ geocode-ws/logs
 *.war
 *.ear
 .Rhistory
+.Rproj.user

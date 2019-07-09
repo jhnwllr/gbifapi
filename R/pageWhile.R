@@ -47,3 +47,34 @@ pageWhile = function(FUN = f,Step = 100,maxPages = 10,verbose=TRUE,...) { # util
   return(CL) # return call list
 
 }
+
+
+pageWhileFacet = function(FUN = f,Step = 100,maxPages = 10,verbose=TRUE,...) { # utility function to page through until done
+
+
+  # Step = 100,maxPages = 10,verbose=TRUE,
+  x = list(...) # additional arguments to pass to the function
+
+  Page = 0
+  Done = FALSE
+
+  f = match.fun(FUN)
+
+  CL = list() # save call list
+  while(!Done) { # While not done
+    Call = f(Step=Step,Page=Page,x) # call anonymous function passed through FUN
+    CL = c(CL,Call) # just add the list to the other list
+    check = Call %>% map(~ .x$counts) %>% flatten() %>% map(~ .x$count) %>% flatten_chr()
+    # print(check)
+    Done = length(check) == 0 # check if done. returns no records. might want to change
+    # Done = length(Call) == 0 # check if done. returns no records. might want to change
+    Page = Page + 1 # go to next page
+    if(Page > maxPages) break
+    if(verbose) print("On page: " %+% Page)
+  }
+
+  return(CL) # return call list
+
+}
+
+

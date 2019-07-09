@@ -5,7 +5,7 @@ addDatasetTitle = function(.data,key) {
   keys = eval(arguments$key, .data)
 
   datasettitle = keys %>%
-    map(~ gbifapi::gbifapi("http://api.gbif.org/v1/dataset/" %+% .x)$title) %>%
+    map(~ httr::GET("http://api.gbif.org/v1/dataset/" %+% .x) %>% httr::content() %>% pluck("title")) %>%
     map_if(is_empty, ~ NA_character_) %>%
     flatten_chr()
 

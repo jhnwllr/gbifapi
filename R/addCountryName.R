@@ -23,3 +23,16 @@ addCountryName = function (.data,countrycode) {
   return(d)
 }
 
+
+addContinentName = function (.data,countrycode) {
+
+  arguments = as.list(match.call())
+  countrycode = eval(arguments$countrycode, .data)
+  countrycode = countrycode::countrycode(countrycode, "iso2c", "continent", nomatch = NA)
+
+  d = data.frame(continent = countrycode)
+  d = cbind(.data, d)
+  return(d)
+}
+
+

@@ -53,7 +53,7 @@ page_api_facet = function(url="http://api.gbif.org/v1/dataset/search?type=CHECKL
 
   dots = list(url=url,pluck=pluck) # more arguments to pass to f
 
-  CL = gbifapi::pageWhile(FUN=f,Step=Step,maxPages=maxPages,verbose=verbose,dots) # get pages while is not done.
+  CL = gbifapi::pageWhileFacet(FUN=f,Step=Step,maxPages=maxPages,verbose=verbose,dots) # get pages while is not done.
 
   return(CL)
 }
