@@ -1,7 +1,7 @@
 # gbifapi package
 
 Various utility functions useful for working with GBIF data. 
-Most functions use the GBIF api is some way. 
+Most functions use the GBIF api in some way. 
 
 ### Examples 
 
