@@ -12,6 +12,24 @@
 #'}
 #'
 #'
+#'
+#'
+#'
+
+
+
+
+# add_country_name
+add_gbif_country_name = function(.data,countrycode) {
+
+  gbifapi::get_gbif_countries() %>%
+    mutate(countrycode=iso2) %>%
+    select(countrycode,country=title) %>%
+    merge(.data,id="countrycode")
+
+}
+
+
 addCountryName = function (.data,countrycode) {
 
   arguments = as.list(match.call())
@@ -34,5 +52,14 @@ addContinentName = function (.data,countrycode) {
   d = cbind(.data, d)
   return(d)
 }
+
+
+
+get_continent_name = function (countrycode) {
+  continent = countrycode::countrycode(countrycode, "iso2c", "continent", nomatch = NA)
+  return(continent)
+}
+
+
 
 

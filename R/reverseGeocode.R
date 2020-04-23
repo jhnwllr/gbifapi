@@ -25,3 +25,28 @@ reverseGeocode = function(.data) {
   d = cbind(.data, d)
   return(d)
 }
+
+
+
+reverse_geocode = function(decimallatitude,decimallongitude) {
+
+  .data = data.frame(decimallatitude,decimallongitude)
+
+  Call = .data %>% purrr::transpose() %>%  # turn in list to put in geocoder
+    map(~ gbifapi::gbifapi("http://api.gbif.org/v1/geocode/reverse?" %+% "lat=" %+% .x$decimallatitude %+% "&" %+% "lng=" %+% .x$decimallongitude))
+
+  iso2 = Call %>% map(~ flatten(.x)) %>% # go up one level in the list
+    map(~ .x$isoCountryCode2Digit) %>%
+    map_if(is.null, ~ NA_character_) %>% # remove missing null
+    flatten_chr() # output character
+
+  return(iso2)
+}
+
+
+
+
+
+
+
+

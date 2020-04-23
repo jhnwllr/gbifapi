@@ -1,23 +1,20 @@
 # gbifapi package
 
-This package does **one thing**. It calls the gbif api from a url and returns a list. 
+Various utility functions useful for working with GBIF data. 
+Most functions use the GBIF api is some way. 
 
-It might not work for every api call but should return a big ugly list. Not to be taken too seriously.  
-
-### Usage
+### Examples 
 
 ```
-url = "https://api.gbif.org/v1/occurrence/search?limit=0&taxonKey=797&facet=issue&facetLimit=100" 
-
-library(gbifapi)
-gbifapi(url)
-
+gbifapi::get_nodes_data() # returns all information about GBIF nodes in tibble
+gbifapi::get_dataset_counts(keys) # returns occurrences counts for dataset key
+gbifapi::get_gbif_countries() # returns dataframe of all GBIF recognized countries
+gbifapi::get_occ_count_from_taxonkeys(taxonkeys) # 
 ```
 
 ### Installation
 
 ```
-library(devtools)
-install_github("jhnwllr/gbifapi")
+devtools::install_github("jhnwllr/gbifapi")
 ```
 
