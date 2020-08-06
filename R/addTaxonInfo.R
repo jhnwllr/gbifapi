@@ -41,3 +41,9 @@ addTaxonInfo = function(.data,key,moreInfo=FALSE) { # adds taxon info to a data.
   d = cbind(.data,d)
   return(d)
 }
+
+
+
+
+
+

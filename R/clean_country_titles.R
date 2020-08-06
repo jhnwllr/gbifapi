@@ -9,7 +9,6 @@ clean_country_titles = function(title) {
     mutate(title = stringr::str_replace_all(title,", Bolivarian Republic of","")) %>%
     mutate(title = stringr::str_replace_all(title,", Plurinational State of","")) %>%
     mutate(title = stringr::str_replace_all(title,"Korea, Republic of","South Korea")) %>%
-    mutate(title = stringr::str_replace_all(title,"United Arab Emirates","UAE")) %>%
     pull(title)
 
 }
