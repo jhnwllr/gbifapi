@@ -13,4 +13,10 @@ empty_fill_chr = function(x) {
 
 }
 
+empty_fill_dbl = function(x) {
+
+  x %>% purrr::map_if(is_empty, ~ NA_real_) %>% purrr::flatten_dbl()
+
+}
+
 

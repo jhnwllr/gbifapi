@@ -4,6 +4,6 @@ reverse_wkt = function(x) {
     round(4) %>%
     list(.) %>%
     list(Polygon = .) %>%
-    wellknown::geojson2wkt(fmt=4,digits=4)
+    wellknown::geojson2wkt(fmt=6,digits=6)
 }
 
